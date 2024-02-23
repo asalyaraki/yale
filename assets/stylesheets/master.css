@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.background_img{
+    background-image: url(../img/home_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 2000px 2000px rgba(0, 74, 124, 0.349);
+}
+
+.discover{
+    perspective: 800px;
+    &::before{
+        transform-origin: top;
+        transform: rotateX(90deg);
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        text-transform: capitalize;
+        opacity: 0;
+        cursor: pointer;
+    }
+    &:hover{
+        &::before{
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.af{
+    &::after{
+        background-color: rgba(255, 255, 255, 0.212);
+    }
+}
+
+.shdow{
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.178);
+}
+
+.bg_img{
+    background-image: url(../img/shapes-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg_image{
+    background-image: url(../img/blog-bg.png);
+}
+
+@font-face {
+    font-family: fredoka;
+    src: url(../font/Fredoka-Regular.ttf);
+}
